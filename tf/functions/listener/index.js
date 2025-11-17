@@ -1,6 +1,6 @@
 exports.handler = async (event) => {
   // console.log(event);
-  console.log(event.requestContext.requestId);
+  console.log('Request ID (yoda):', event.requestContext.requestId);
 
   return {
     statusCode: 200,
