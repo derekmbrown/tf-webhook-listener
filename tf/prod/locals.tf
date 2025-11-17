@@ -3,6 +3,6 @@ locals {
   account_id = ""
   env        = "prod"
   project    = "test"
-  region     = "us-east-1"
+  region     = var.region
   server_endpoint = "https://api.prod.test.com"
 }

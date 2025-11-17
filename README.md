@@ -6,6 +6,9 @@ Terraform repository to showcase a simple webhook setup using services in AWS.
 
 ```shell
 # Plan Terraform in dev account
+make init ENV=dev
+
+# Plan Terraform in dev account
 make plan ENV=dev
 
 # Apply Terraform in dev account

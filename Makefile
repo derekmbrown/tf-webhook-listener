@@ -1,5 +1,8 @@
 TF_FOLDER=tf/
 
+init:
+	terraform -chdir=$(TF_FOLDER)$(ENV) init
+
 plan:
 	terraform -chdir=$(TF_FOLDER)$(ENV) plan
 
