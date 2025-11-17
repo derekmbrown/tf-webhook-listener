@@ -1,0 +1,34 @@
+name: Deploy Lambda
+
+on:
+  push:
+    paths:
+      - .github/workflows/deploy_lambda.yml
+      - tf/functions/listener/**
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Package code
+        run: |
+          cd tf/functions/listener &&
+            zip -r index.zip .
+
+      - name: Authenicate AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy code
+        run: |
+          cd tf/functions/listener &&
+            aws lambda update-function-code --function-name test-dev-listener --zip-file fileb://index.zip
