@@ -1,6 +1,6 @@
 # tf-webhook-processor
 
-Terraform repository to showcase a basic webhook integration setup using services in AWS.
+Terraform repository to showcase a simple webhook setup using services in AWS.
 
 ### Makefile (example usage):
 
