@@ -1,6 +1,10 @@
 # tf-webhook-listener
 
 Terraform repository to showcase a simple webhook setup AWS.
+- Amazon API Gateway
+- Amazon CloudWatch
+- AWS IAM
+- AWS Lambda
 
 ## Setup:
 1. Configure the AWS CLI. See [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
