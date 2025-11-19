@@ -1,6 +1,6 @@
 # tf-webhook-processor
 
-Terraform repository to showcase a simple webhook setup using services in AWS.
+Terraform repository to showcase a simple webhook setup AWS.
 
 ### Makefile (example usage):
 
@@ -28,6 +28,12 @@ make test_api ENV=dev
 
 # View api logs in dev account
 make view_api_logs ENV=dev
+
+# View lambda function logs in dev account
+make view_function_logs ENV=dev
+
+# Upload lambda function to dev account
+make upload_function ENV=dev
 ```
 
 ### Tools:
