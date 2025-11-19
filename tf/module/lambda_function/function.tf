@@ -11,9 +11,6 @@ resource "aws_lambda_function" "main" {
   environment {
     variables = {
       ENV             = var.env
-      TABLE_NAME      = "${var.project}-${var.env}"
-      SERVER_ENDPOINT = var.server_endpoint
-      SNS_TOPIC_ARN   = var.sns_topic_id
     }
   }
 

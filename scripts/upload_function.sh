@@ -12,7 +12,7 @@ TF_FOLDER=tf/$ENV
 
 FUNCTION_NAME=$(terraform -chdir=$TF_FOLDER output -raw function_name)
 
-cd tf/functions/listener &&
+cd functions/listener &&
   zip -r index.zip . &&
   aws lambda update-function-code \
     --function-name test-$ENV-listener \
