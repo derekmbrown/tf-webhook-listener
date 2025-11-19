@@ -19,10 +19,13 @@ destroy_auto:
 	terraform -chdir=$(TF_FOLDER)$(ENV) destroy  --auto-approve
 
 test_api:
-	sh scripts/test_api.sh $(ENV)
+	sh scripts/test_api.sh $(ENV) $(BODY)
 
 view_api_logs:
 	sh scripts/view_api_logs.sh $(ENV)
 
 view_function_logs:
 	sh scripts/view_function_logs.sh $(ENV)
+
+upload_function:
+	sh scripts/upload_function.sh $(ENV)

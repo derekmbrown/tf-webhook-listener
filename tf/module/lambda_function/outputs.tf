@@ -5,3 +5,7 @@ output "function_arn" {
 output "function_log_group_name" {
   value = aws_cloudwatch_log_group.main.name
 }
+
+output "function_name" {
+  value = aws_lambda_function.main.function_name
+}

@@ -1,6 +1,13 @@
 #!/bin/bash
 
 ENV=$1
+
+envs=("dev" "qa" "prod")
+if [ -z "$ENV" ] || [[ ! " ${envs[@]} " =~ " ${ENV} " ]]; then
+  echo "ENV missing or invalid."
+  exit
+fi
+
 TF_FOLDER=tf/$ENV
 
 LOG_NAME=$(terraform -chdir=$TF_FOLDER output -raw apigw_log_group_name)

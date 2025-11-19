@@ -2,6 +2,10 @@ output "function_log_group_name" {
   value = module.lambda_function_test.function_log_group_name
 }
 
+output "function_name" {
+  value = module.lambda_function_test.function_name
+}
+
 output "apigw_external_id" {
   value = module.api_gw_test.apigw_external_id
 }
