@@ -3,16 +3,23 @@
 Terraform repository to showcase a simple webhook setup AWS.
 
 ## Setup:
-- Export the following `TF_*` env variables to terminal:
+1. Configure the AWS CLI. See [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
 
-```shell
-export TF_VAR_account_id=<AWS_ACCOUNT_ID>
-export TF_VAR_region=<AWS_REGION>
-```
+1. Export the following `TF_*` env variables to terminal:
+
+    ```shell
+    export TF_VAR_account_id=<AWS_ACCOUNT_ID>
+    export TF_VAR_region=<AWS_REGION>
+    ```
 
 ## Makefile (example usage):
 
 ```shell
+
+######################################
+# Terraform commands
+######################################
+
 # Plan Terraform in dev account
 make init ENV=dev
 
@@ -31,6 +38,10 @@ make destroy ENV=dev
 # Destroy Terraform in dev account without approval
 make destroy_auto ENV=dev
 
+######################################
+# Utility commands
+######################################
+
 # Test api in dev account
 make test_api ENV=dev
 
@@ -46,6 +57,12 @@ make upload_function ENV=dev
 
 ## Tools:
 ```shell
+# Homebrew: Package manager for macOS
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# awscli: The official CLI for AWS
+brew install awscli
+
 # terraform: The official Terraform binary
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
