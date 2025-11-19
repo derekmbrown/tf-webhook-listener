@@ -16,6 +16,8 @@ Terraform repository to showcase a simple webhook setup AWS.
     export TF_VAR_region=<AWS_REGION>
     ```
 
+1. Use the [Makefile](https://github.com/derekmbrown/tf-webhook-listener/blob/main/Makefile) to interact code.
+
 ## Makefile (example usage):
 
 ```shell
