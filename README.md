@@ -1,4 +1,4 @@
-# tf-webhook-processor
+# tf-webhook-listener
 
 Terraform repository to showcase a simple webhook setup AWS.
 
