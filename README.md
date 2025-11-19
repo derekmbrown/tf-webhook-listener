@@ -3,7 +3,6 @@
 Terraform repository to showcase a simple webhook setup AWS.
 
 ## Setup
-
 - Export `TF_*` env variables to terminal.
 
 ```shell
@@ -11,7 +10,7 @@ export TF_VAR_account_id=<AWS_ACCOUNT_ID>
 export TF_VAR_region=<AWS_REGION>
 ```
 
-### Makefile (example usage):
+## Makefile (example usage):
 
 ```shell
 # Plan Terraform in dev account
@@ -45,7 +44,7 @@ make view_function_logs ENV=dev
 make upload_function ENV=dev
 ```
 
-### Tools:
+## Tools:
 ```shell
 # terraform: The official Terraform binary
 brew tap hashicorp/tap
