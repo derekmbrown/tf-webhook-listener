@@ -38,6 +38,10 @@ resource "aws_iam_role_policy" "main" {
       "Effect": "Allow",
       "Action": "sns:*",
       "Resource": "*"
+    }, {
+      "Effect": "Allow",
+      "Action": "lambda:*",
+      "Resource": "*"
     }]
   })
 }

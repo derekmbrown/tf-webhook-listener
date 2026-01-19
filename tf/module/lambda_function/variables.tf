@@ -4,8 +4,8 @@ variable "name" {}
 variable "description" {}
 variable "filename" {}
 variable "role" {}
-variable "handler" { default = "index.handler" }
-variable "runtime" { default = "nodejs22.x" }
+variable "handler" { default = "main" }
+variable "runtime" { default = "provided.al2023" }
 variable "publish" { default = "true" }
 variable "timeout" { default = 120 }
 variable "retention_in_days" { default = 3 }

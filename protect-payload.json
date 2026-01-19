@@ -1,0 +1,50 @@
+{
+  "alarm": {
+    "name": "Vehicle",
+    "sources": [
+      {
+        "device": "8C30663A5E7F",
+        "type": "include"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": {
+          "type": "is",
+          "source": "vehicle"
+        }
+      }
+    ],
+    "triggers": [
+      {
+        "key": "vehicle",
+        "device": "8C30663A5E7F",
+        "zones": {
+          "loiter": [],
+          "zone": [
+            1
+          ],
+          "line": []
+        },
+        "eventId": "6959a43a03de7003e4183c64",
+        "timestamp": 1767482437553
+      },
+      {
+        "key": "vehicle",
+        "device": "8C30663A5E7F",
+        "zones": {
+          "loiter": [],
+          "zone": [
+            1
+          ],
+          "line": []
+        },
+        "eventId": "6959a43a03de7003e4183c64",
+        "timestamp": 1767482437559
+      }
+    ],
+    "eventPath": "/protect/events/event/6959a43a03de7003e4183c64",
+    "eventLocalLink": "https://192.168.0.86/protect/events/event/6959a43a03de7003e4183c64"
+  },
+  "timestamp": 1767482438456
+}
