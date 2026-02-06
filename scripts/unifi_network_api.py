@@ -3,16 +3,17 @@
 import requests, warnings, json, os
 warnings.filterwarnings('ignore')
 
-API_KEY = os.getenv('UNIFI_API_KEY')
+UNIFI_NETWORK_API_KEY = os.getenv('UNIFI_NETWORK_API_KEY')
 
 DOMAIN = 'https://192.168.0.1'
 HEADERS = {
-  'X-API-KEY': API_KEY,
+  'X-API-KEY': UNIFI_NETWORK_API_KEY,
   'Accept': 'application/json'
 }
 
 def make_request(url, headers):
   resp = requests.get(url, headers=headers, verify=False)
+  print("Status:", resp.status_code)
   return resp.text
 
 def get_app_info():
