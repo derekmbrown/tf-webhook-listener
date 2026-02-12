@@ -32,7 +32,7 @@ def get_sensors():
   url = f'{DOMAIN}/proxy/protect/integration/v1/sensors'
   return make_request(url, HEADERS)
 
-def get_event():
+def get_events():
   url = f'{DOMAIN}/proxy/protect/api/events'
   params = { "limit": 10 }
   return make_request(url, HEADERS, params)
@@ -42,13 +42,13 @@ def main():
   cameras = get_cameras()
   camera = get_camera('68bc4a1801539303e4000411')
   sensors = get_sensors()
-  event = get_event()
+  # events = get_events()
 
   print(app_info)
   print(cameras)
   print(camera)
   print(sensors)
-  print(event)
+  # print(events)
 
 main()
 
